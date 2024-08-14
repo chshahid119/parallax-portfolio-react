@@ -20,7 +20,7 @@ const AppLayout = () => {
 
         // Example fetch call - uncomment when needed
         const response = await fetch(`${apiUrl}/categories/`);
-       
+        
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -34,7 +34,7 @@ const AppLayout = () => {
       }
     }
 
-    fetchData(); // Call the fetchData function
+    fetchData();
   }, []);
 
 
