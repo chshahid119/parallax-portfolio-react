@@ -1,0 +1,101 @@
+@import './fonts.css';
+
+/* Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font-face */
+@font-face {
+  font-family: 'GeorgiaCustom';
+  src: url('./../../public/fonts/georgia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box; /* Ensure consistent box-sizing */
+}
+
+body {
+  margin: 0; /* Reset default body margin */
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #e8e8e8;
+  color: #374151;
+  font-weight: 400;
+  font-family: 'GeorgiaCustom', serif; /* Apply custom font here */
+}
+
+/* .title { */
+/* @apply text-center text-white py-12;  */
+/* } */
+.title {
+  text-align: center;
+  color: white;
+}
+
+/* .image {
+  @apply w-full h-auto block mx-auto;
+} */
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* .footer {
+  @apply text-center text-white py-12;
+} */
+.footer {
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+/* Ensure the background image for Layer 3 covers its area */
+.layer-3-img {
+  width: 100%;
+  height: auto;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  z-index: 10000; /* Make sure it's behind other content */
+  object-fit: contain;
+}
+.new {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.font {
+  font-size: 75px;
+  color: black;
+}
+.mar {
+  margin-top: 35px;
+}
+
+.text {
+  font-family: 'gerogia', 'serif';
+  font-size: 40px;
+  color: black;
+  margin-top: 25px;
+}
+
+.mar1 {
+  margin-top: -100px;
+}
+
+.projecttext{
+  font-family: 'gerogia', 'serif';
+}
+
+.py-24{
+  padding-top:6rem;
+  padding-bottom:0rem;
+}

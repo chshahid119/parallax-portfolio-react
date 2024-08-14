@@ -1,0 +1,14 @@
+.bebas-neue-regular {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 550;
+  font-style: normal;
+}
+
+
+.gerogia
+{
+  font-family: 'GeorgiaCustom';
+  src: url('./../../fonts/DINNeuzeitGroteskLT-BoldCond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
