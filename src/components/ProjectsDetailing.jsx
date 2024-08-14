@@ -16,6 +16,7 @@ function ProjectsDetailing() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        // console.log(data);
         setAllProjectsOfCategory(data);
 
         // If no project is selected, set the default project to the first one

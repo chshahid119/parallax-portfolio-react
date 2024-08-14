@@ -11,7 +11,13 @@ const NotFound = lazy(() => import('./components/NotFound'));
 const App = () => {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="w-16 h-16 border-4 border-[#993717] border-b-transparent rounded-full box-border animate-spin"></div>
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<AppLayout />} />
           <Route path="category/:id" element={<ProjectsLayout />} />

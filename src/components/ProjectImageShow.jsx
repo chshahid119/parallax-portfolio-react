@@ -10,6 +10,7 @@ function ProjectImageShow({ data }) {
   const [open, setOpen] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState(null); // Track the selected media (image or video)
   const [mediaType, setMediaType] = useState('image'); // Track the type of media
+ 
 
   const { search } = useLocation();
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ function ProjectImageShow({ data }) {
 
   // Find the project data based on the project id
   const selectedProject = data[project];
+
+ 
 
   useEffect(() => {
     if (project && selectedProject) {
@@ -63,13 +66,15 @@ function ProjectImageShow({ data }) {
     navigate(`?project=${project}&tab=${selectedTab}`); // Remove mediaId from URL when modal closes
   };
 
+
+
   return (
-    <div className='p-4 m-28'>
+    <div className='p-4 m-28 flex flex-col gap-8'>
       <div className='flex flex-col gap-4'>
-        <h1 className='text-5xl'>title<span className='text-red-600'>.</span> project 0{project}</h1>
-        <p className='font-light'>date<span className='text-red-600'>.</span> 2035</p>
+        <h1 className='text-5xl'>title<span className='text-red-600'>.</span>{selectedProject?.name}</h1>
+        {/* <p className='font-light'>date<span className='text-red-600'>.</span> 2035</p>
         <p className='font-light'>city<span className='text-red-600'>.</span> New York</p>
-        <p className='font-light mb-2'>size<span className='text-red-600'>.</span> mural painting 1000m x 200m</p>
+        <p className='font-light mb-2'>size<span className='text-red-600'>.</span> mural painting 1000m x 200m</p> */}
       </div>
 
       <div className='border-b-2 border-gray-300 mb-4'>
@@ -180,7 +185,7 @@ ProjectImageShow.propTypes = {
         })
       ),
       url: PropTypes.string.isRequired,
-      tags: PropTypes.arrayOf(PropTypes.string),
+      // tags: PropTypes.arrayOf(PropTypes),
     })
   ).isRequired,
 };
