@@ -7,7 +7,7 @@ function Navbar({ scrollToPage }) {
   return (
     <div className="w-full flex sm:flex-col gap-4 justify-between p-4">
       <div className="flex items-center justify-center mar">
-        <h1 className="p-5 rounded-full sm:text-2xl bebas-neue-regular font">
+        <h1 className="p-5 rounded-full text-2xl bebas-neue-regular font">
           SHAHEER HASSAN
         </h1>
       </div>
