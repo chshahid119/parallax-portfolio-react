@@ -15,9 +15,9 @@ function Navbar({ scrollToPage }) {
       <div>
           <NavBarList />
     </div>
-      <div>
+      {/* <div>
         <GiHamburgerMenu />
-        </div>
+        </div> */}
         </div>
 
     </div>
